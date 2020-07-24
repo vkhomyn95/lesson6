@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <select name="userForm" [formControl]="fieldToSelect">
+    <option *ngFor="let user of users" [ngValue]="user">{{user.name}} {{user.username}}</option>
+  </select>
+  <button (click)="getUser()">get user</button>
+</form>
+<router-outlet></router-outlet>

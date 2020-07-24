@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <select name="id" [formControl]="selectField">
+    <option *ngFor="let post of posts" [ngValue]="post"><b>{{post.id}}</b> {{post.title}}</option>
+  </select>
+  <button (click)="getPost()">get post</button>
+</form>
+<router-outlet></router-outlet>
